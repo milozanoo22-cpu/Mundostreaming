@@ -1,41 +1,36 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width,initial-scale=1" />
-    <title>StreamSupport</title>
-    <link rel="stylesheet" href="styles.css" />
+  <meta charset="UTF-8">
+  <title>Streamers United</title>
 </head>
 <body>
-    <header class="app-header">
-        <h1>StreamSupport</h1>
-        <p class="subtitle">Conecta, apoya y sube en el ranking</p>
-    </header>
+  <h1>Streamers United</h1>
 
-    <main>
-        <section id="auth-container" class="card center">
-            <button id="twitch-login" class="btn">Iniciar con Twitch</button>
-            <p class="muted">Conéctate para agendar y ver tu ranking.</p>
-        </section>
+  <!-- Botón de conexión con Twitch -->
+  <button id="loginTwitch">Conectarse con Twitch</button>
+  <p id="userInfo"></p>
 
-        <section id="dashboard" class="hidden">
-            <nav class="nav">
-                <button id="live-streams" class="nav-btn active">Streams en Vivo</button>
-                <button id="points-ranking" class="nav-btn">Puntos y Ranking</button>
-                <button id="schedule-support" class="nav-btn">Agendar Apoyo</button>
-                <button id="logout" class="nav-btn danger">Cerrar sesión</button>
-            </nav>
+  <!-- Sistema de puntos -->
+  <div id="puntos">
+    <h2>Mis Puntos</h2>
+    <p>Puntos actuales: <span id="puntosActuales">0</span></p>
+    <p>Expiran a las 00:00 hora Colombia</p>
+  </div>
 
-            <div id="content-area" class="card">
-                <!-- Aquí el contenido dinámico -->
-            </div>
-        </section>
-    </main>
+  <!-- Agenda -->
+  <div id="agenda">
+    <h2>Agendar Transmisión</h2>
+    <p>Requisitos: 30 pts = 1h | 45 pts = 2h</p>
+    <div id="horasDisponibles"></div>
+  </div>
 
-    <footer class="footer">
-        <small>Hecho para streamers — despliega en GitHub Pages</small>
-    </footer>
+  <!-- Streamers en vivo -->
+  <div id="streamersVivos">
+    <h2>Streamers en Vivo</h2>
+    <div id="listaStreamers"></div>
+  </div>
 
-    <script src="script.js"></script>
+  <script src="streamers united.js"></script>
 </body>
 </html>
