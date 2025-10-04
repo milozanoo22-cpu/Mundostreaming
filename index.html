@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Streamers United</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <!-- Pantalla de login -->
+  <section id="login-section" class="centered">
+    <div class="card">
+      <h1>🎮 Streamers United</h1>
+      <p>Conéctate con tu cuenta de Twitch para continuar</p>
+      <button id="loginTwitch" class="twitch-btn">Iniciar sesión con Twitch</button>
+    </div>
+  </section>
+
+  <!-- Contenido principal (se oculta hasta login) -->
+  <section id="app-section" class="hidden">
+    <header>
+      <h1>Streamers United</h1>
+      <button id="logout" class="logout-btn">Cerrar sesión</button>
+    </header>
+
+    <main>
+      <div class="card">
+        <h2>Mis Puntos</h2>
+        <p>Puntos actuales: <span id="puntosActuales">0</span></p>
+        <p>Expiran a las 00:00 hora Colombia</p>
+      </div>
+
+      <div class="card">
+        <h2>Agendar Transmisión</h2>
+        <p>Requisitos: <strong>30 pts = 1h</strong> | <strong>45 pts = 2h</strong></p>
+        <div id="horasDisponibles" class="horas-grid"></div>
+      </div>
+
+      <div class="card">
+        <h2>Streamers en Vivo</h2>
+        <div id="listaStreamers"></div>
+      </div>
+    </main>
+  </section>
+
+  <script src="app.js"></script>
+</body>
+</html>
